@@ -1,0 +1,359 @@
+@import "colors";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  position: relative;
+  background-color: $primary2;
+  scroll-behavior: smooth;
+}
+body {
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  width: 100vw;
+  // height: 800vh;
+}
+
+//buttons! (3 color options)
+
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 1.5em;
+  background-color: transparent;
+  margin: 20px;
+  border: solid 2px $primary1;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1em;
+  position: relative;
+  a {
+    z-index: 1000;
+    position: relative;
+    text-decoration: none;
+  }
+}
+.btn:after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 1.5em;
+  z-index: 2;
+  transition: all 0.5s ease-out;
+  opacity: 0;
+}
+.btn:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+.btn--primary {
+  border: solid 2px $primary1;
+  a {
+    color: $primary1;
+  }
+}
+.btn--secondary {
+  border: solid 2px $secondary2;
+  a {
+    color: $secondary2;
+  }
+}
+.btn--ternary {
+  border: solid 2px $ternary2;
+  a {
+    color: $ternary2;
+  }
+}
+
+// fonts
+h1 {
+  font-size: 3.5em;
+}
+h2 {
+  font-size: 1.7em;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 15px;
+}
+// sections
+.page {
+  height: 110vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.home {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: $primary2;
+  color: $primary1;
+  z-index: 0;
+}
+
+.about {
+  background-color: $secondary1;
+  color: $secondary2;
+  left: 10px;
+  z-index: 1;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.menu {
+  // font-family: "Abril Fatface", cursive;
+  font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  font-size: 1.2em;
+  // box-shadow: 3px 3px 10px rgb(71, 65, 65);
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(3px);
+}
+
+.menu--item {
+  a {
+    transition: all 0.5s;
+    // color: $primary1;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5em;
+    border: solid 0px $primary1;
+    cursor: pointer;
+  }
+}
+.menu--item,
+.menu--logo {
+  list-style-type: none;
+  fill: #ffffff !important;
+}
+
+.down {
+  font-size: 2em;
+  animation: bounce 2s ease-in-out infinite;
+  grid-area: 6/4/7/5;
+  text-align: center;
+  a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+//home page details
+.home--down {
+  a{
+    color: $primary1;
+  }
+}
+
+.home--text {
+  grid-area: 3/2/6/5;
+}
+.home--img {
+  grid-area: 2/5/5/7;
+  margin: 50px;
+  img {
+    height: 80vh;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-30%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  55% {
+    transform: translateY(-2%);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+//about page details
+.about--title {
+  font-family: "Abril Fatface", cursive;
+  margin-left: 50px;
+  grid-area: 3/1/4/3;
+}
+.about--text {
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: "Roboto Condensed", sans-serif;
+  grid-area: 2/4/5/7;
+  line-height: 150%;
+  position: relative;
+}
+.about--down {
+  a{
+  color: $secondary2;
+  }
+}
+.about--img {
+  grid-area: 2/2/5/4;
+  margin-left: 50px;
+  img {
+    height: 500px;
+  }
+}
+.underline:before {
+  content: " ";
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  padding: 10px;
+  width: 0;
+  z-index: -1;
+  height: 10%;
+}
+
+.project--title--right {
+  grid-area: 2/5/3/8;
+}
+.project--text--right {
+  grid-area: 3/5/6/8;
+  margin-right: 50px;
+  font-size: 1.1em;
+}
+.project--btn--right {
+  grid-area: 5/5/6/8;
+  margin-right: 50px;
+}
+.project--img--right {
+  grid-area: 2/1/6/5;
+  margin-left: 50px;
+  img,
+  video {
+    height: 45vh;
+    border-radius: 1em;
+  }
+}
+
+.project--title--left {
+  grid-area: 2/1/3/4;
+  margin-left: 50px;
+}
+
+.project--text--left {
+  grid-area: 3/1/6/4;
+  margin-left: 50px;
+  font-size: 1.1em;
+}
+
+.project--btn--left {
+  grid-area: 5/1/6/3;
+  margin-left: 50px;
+}
+
+//project1
+.project1 {
+  background-color: $ternary1;
+  color: $ternary2;
+}
+
+//project2
+.project2 {
+  background-color: $primary2;
+  color: #ffffff;
+}
+
+//project3
+.project3 {
+  background-color: $secondary1;
+  color: $secondary2;
+}
+
+//project4
+.project4 {
+  background-color: $ternary1;
+  color: $ternary2;
+}
+
+.project1,
+.project2,
+.project3,
+.project4 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+//contact page
+
+.contact {
+  height: 100vh !important;
+  background-color: $secondary1;
+  color: $secondary2;
+}
+.contact--title {
+  font-family: "Abril Fatface", cursive;
+  margin-left: 50px;
+  grid-area: 3/1/4/3;
+}
+.contact--final{
+  grid-area:5/3/7/7;
+}
+.contact--cp {
+  grid-area: 6/1/7/8;
+  background-color: rgb(48, 48, 48);
+  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  position: relative;
+}
+.contact--content-header{
+  grid-area: 2/3/3/7;
+}
+.contact--textbox {
+  grid-area: 3/3/5/7;
+  display: flex;
+  justify-content: space-evenly;
+  height: 50vh;
+}
+.contact--links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.3em;
+}
+.contact--links--flex {
+  display: flex;
+  align-items: center;
+}
+
+.contact--icons {
+  fill: $secondary2;
+}
+.contact--separator {
+  height: 100px;
+  width: 2px;
+  background-color: $secondary2;
+}

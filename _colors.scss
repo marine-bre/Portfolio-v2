@@ -1,0 +1,19 @@
+$primary1:#fa58b9;
+// $primary2:#265891;
+$primary2:#316fb6;
+
+$secondary1:rgb(222, 182, 209);
+$secondary2: #9a2929;
+$ternary1: #ADEFD1FF;
+$ternary2:#00203FFF;
+$navcolor:$primary1;
+
+:export {
+    primary: $primary1;
+    secondary: $secondary2;
+    ternary: $ternary2;
+    navColor:$navcolor;
+  }
+
+
+ 
