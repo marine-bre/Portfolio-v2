@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
     <script src="https://use.fontawesome.com/12b0236b13.js"></script>
+
 </head>
 <nav>
     <ul class='menu'>
@@ -84,12 +85,12 @@
     </ul>
 </nav>
 
-<body>
+<body class="background--zoom">
     <section id="home" class='page home'>
         <div class='home--text'>
             <h1>HELLO THERE!<br><br>I'M MARINE, A <span class="underline">FRONT END</span> DEVELOPER</h1>
         </div>
-        <div class="home--img"><img src='./pink-keyboard.png' /></div>
+        <div class="home--img"><img src='./media/pink-keyboard.png' /></div>
         <div class='down home--down'><a href="#about">▽</a></div>
     </section>
     <section id="about" class='page about'>
@@ -99,24 +100,27 @@
         <div class="about--text">
             <h2>
                 My name is Marine Bretonniere and I am a self-taught
-                frontend programmer!
+                 <span class="highlight--about">frontend developer</span>!
             </h2>
             <br>
             <h3>
-                I decided to turn to programming after receiving a BSc in Psychology
-                and an MA in Conflict Resolution and Mediation. I've been studying
-                for almost a year, and you can now have a look at some of the projects
-                I've worked on!
+                I decided to turn to programming after receiving a <span class="highlight--about">BSc in Psychology</span>
+                and an <span class="highlight--about"> MA</span> in Conflict Resolution. <br/>I've been studying
+                for a year, and am now looking for a full-time position as a front end developer.</br>
+                Recently, I have been working a lot with <span class="highlight--about">React</span> & <span class="highlight--about">node.js.</span></br>
+                Scroll down to have a look at some of the projects I worked on!
             </h3>
             <br>
+            <h3>Skills:</h3>
+        </br>
             <table>
                 <tr>
                     <td>JavaScript (ES6)</td>
-                    <td>React (including hooks)</td>
+                    <td>React</td>
                 </tr>
                 <tr>
                     <td>HTML 5</td>
-                    <td>NodeJS (Express)</td>
+                    <td>node.js & Express</td>
                 </tr>
                 <tr>
                     <td>CSS3, Sass</td>
@@ -125,21 +129,38 @@
             </table>
             </p>
         </div>
-        <div class="about--img"><img src="tete.png" /></div>
+        <div class="about--img"><img src="./media/tete2.png" /></div>
         <div class='down about--down'><a href="#project1">▽</a></div>
     </section>
 
     <section id='project1' class='page project1'>
+        <div class="overlay"></div>
         <div class="project1--el project--title--left">
             <h1>Daily dashboard <span>📅</span></h1>
         </div>
         <div class="project1--el project--text--left">
-            <p>A full-stack application which allows users to sign up, login, manage their tasks (add, remove, modify),
-                and get information such as the news and the weather.
+            <p>A <span class='highlight'>full-stack</span> web application which allows users to sign up, login, manage
+                tasks, get information such as the news and the weather.
                 </br></br>
-                Built with React.js (with hooks), Node JS, and MongoDB.
+                Built with <span class='highlight'>React</span>, <span class='highlight'>node.js</span>, <span
+                    class='highlight'>Express</span>, <span class='highlight'>mongoDB</span>, and Sass.
                 </br></br>
-                Features: Includes sign up and login functionalities, a task manager, and weather and news APIs</p>
+            <ul>
+                <li>The app is connected to a <span class='highlight'>mongoDB database</span> and makes various <span class='highlight'>CRUD requests
+                    </span>to the backend for registration, login, and retrieval of user data</li>
+                <li><span class='highlight'>Data validation</span> is present in front and back-end. Use of bcrypt to
+                    hash password. </li>
+                <li>Use of open APIs to obtain the user's IP address, retrieve the weather according to location, and
+                    live news </li>
+                <li>Detailed error messages to facilitate user experience when registering or logging in (e.g. "Email
+                    already registered)</li>
+            </ul>
+            </p>
+        </div>
+        <div class="project--img--multiple">
+            <img src="./media/dashboard-login.png" alt="Screenshot of the login page of the project">
+            <img src="./media/dashboard-schedule.png" alt="Screenshot of the schedule page of the project">
+            <img src="./media/dashboard-main.png" alt="Screenshot of the main page of the project">
         </div>
         <div class="project1--el project--btn--left">
             <div class="btn-wrapper">
@@ -153,9 +174,44 @@
 
     <section class='page project2'>
         <div class="project2--el project--title--right">
-            <h1>Spacesuit Store <span>🚀</span></h1>
+            <h1>Movie Finder <span>🎥</span></h1>
         </div>
         <div class="project2--el project--text--right">
+            <p>A <span class="highlight2">full-stack</span> realtime app useful for individuals or couples who need
+                help finding a movie to watch! <br /></br>
+                Built with <span class="highlight2">React.js</span>, <span class="highlight2">node.js</span>,
+                Express, and <span class="highlight2">Socket.io</span>.
+                </br></br>
+            <ul>
+                <li>The website offers a 1-player mode or 2-player mode.</li>
+                <li>2-player mode : The <span class="highlight2">realtime communication</span> between the users'
+                    respective devices is made possible by the JavaScript library Socket.io. </li>
+                <li>Users' preferences are collected via a personalised form.</li>
+                <li>Use of <span class="highlight2">GET requests</span> to the TMDb <span class="highlight2">API</span> to retrieve suitable
+                    movie suggestions. </li>
+            </ul>
+        </div>
+        <div class="project--btn--right">
+            <div class="btn-wrapper">
+                <button class='btn btn--secondary'><a href="https://github.com/marine-bre/movie-finder-2021"
+                        target="_blank">Go to code</a></button>
+                <button class='btn btn--secondary'><a href="https://movieees.herokuapp.com/home" target="_blank">Go
+                        to live site</a></button>
+            </div>
+        </div>
+        <div class="project2--el project--img--multiple--left">
+            <img src="./media/movie-menu.png" alt="">
+            <img src="./media/movie-result.png" alt="">
+            <img src="./media/movie-match.png" alt="">
+        </div>
+    </section>
+
+
+    <section class='page project3'>
+        <div class="project3--el project--title--left">
+            <h1>Spacesuit Store <span>🚀</span></h1>
+        </div>
+        <div class="project3--el project--text--left">
             <p>A responsive single page application for a fictional store that sells spacesuits.
                 </br></br>
                 Built with React.js (with hooks), Node JS (Express, Nodemailer), and using Sass as a CSS preprocessor.
@@ -164,7 +220,7 @@
                 the
                 site owner</p>
         </div>
-        <div class="project2--el project--btn--right">
+        <div class="project3--el project--btn--left">
             <div class="btn-wrapper">
                 <button class='btn btn--primary'><a href="https://github.com/marine-bre/the-spacesuit-store"
                         target="_blank">Go to code</a></button>
@@ -172,27 +228,7 @@
                         to live site</a></button>
             </div>
         </div>
-        <div class="project2--el project--img--right"><video src="./space-mobile.mov" muted loop autoplay></video></div>
-    </section>
-
-
-    <section class='page project3'>
-        <div class="project3--el project--title--left">
-            <h1>Movie Finder <span>🎥</span></h1>
-        </div>
-        <div class="project3--el project--text--left">
-            <p>An app useful for couples who cannot find a movie to watch! After connecting to the app from their own
-                devices and completing a quiz, the app will offer movie suggestions.
-                </br></br>
-                Built with React.js (with React hooks, React Portal), Node.js (Express, Socket.io), Bootstrap.
-                </br></br>
-                Features: Fetching data from a public API & using Socket.io rooms</p>
-        </div>
-        <div class="project3--el project--btn--left">
-            <div class="btn-wrapper">
-                <button class='btn btn--secondary'><a href="" target="_blank">Go to code</a></button>
-                <button class='btn btn--secondary'><a href="" target="_blank">Go to live site</a></button>
-            </div>
+        <div class="project3--el project--img--left"><video src="./media/space-mobile.mov" muted loop autoplay></video>
         </div>
     </section>
 
@@ -216,7 +252,7 @@
                         live site</a></button>
             </div>
         </div>
-        <div class="project4--el project--img--right"><img src="./portfolio.png"></div>
+        <div class="project4--el project--img--right"><img src="./media/portfolio.png"></div>
     </section>
 
     <section id="contact" class='page contact'>
@@ -261,11 +297,14 @@
         </div>
         <h2 class="contact--final">Looking forward to hearing from you!</h2>
 
-        <div class="contact--cp">
-            <p>© Marine Bretonniere - 2021</p>
-        </div>
     </section>
 </body>
+
+<footer>
+    <div class="footer">
+        <p>© Marine Bretonniere - 2021</p>
+    </div>
+</footer>
 
 <script src="main.js"></script>
 

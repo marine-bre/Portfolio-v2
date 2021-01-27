@@ -7,7 +7,7 @@
 }
 html {
   position: relative;
-  background-color: $primary2;
+  background-color: black;
   scroll-behavior: smooth;
 }
 body {
@@ -88,9 +88,18 @@ h2 {
   font-family: "Roboto Condensed", sans-serif;
   margin: 15px;
 }
+h3 {
+  font-size: 1em;
+}
+h2,
+h3,
+p,
+li {
+  line-height: 130%;
+}
 // sections
 .page {
-  height: 110vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -106,7 +115,7 @@ h2 {
 .about {
   background-color: $secondary1;
   color: $secondary2;
-  left: 10px;
+  // left: 10px;
   z-index: 1;
 }
 
@@ -153,14 +162,14 @@ nav {
   animation: bounce 2s ease-in-out infinite;
   grid-area: 6/4/7/5;
   text-align: center;
-  a{
+  a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
   }
 }
 //home page details
 .home--down {
-  a{
+  a {
     color: $primary1;
   }
 }
@@ -214,15 +223,15 @@ nav {
   position: relative;
 }
 .about--down {
-  a{
-  color: $secondary2;
+  a {
+    color: $secondary2;
   }
 }
 .about--img {
   grid-area: 2/2/5/4;
-  margin-left: 50px;
+  margin-left: 40px;
   img {
-    height: 500px;
+    height: 400px;
   }
 }
 .underline:before {
@@ -254,7 +263,29 @@ nav {
   img,
   video {
     height: 45vh;
-    border-radius: 1em;
+    border-radius: 0.5em;
+  }
+}
+
+.project--img--multiple {
+  grid-area: 1/3/7/8;
+  position: relative;
+  img {
+    position: absolute;
+    height: 40vh;
+    border-radius: 0.5em;
+    &:nth-child(1) {
+      right: 20px;
+      top: 40px;
+    }
+    &:nth-child(2) {
+      right: 110px;
+      top: 250px;
+    }
+    &:nth-child(3) {
+      right: 220px;
+      top: 410px;
+    }
   }
 }
 
@@ -274,22 +305,61 @@ nav {
   margin-left: 50px;
 }
 
+.project--img--left {
+  grid-area: 2/5/5/8;
+  margin-right: 50px;
+  img,
+  video {
+    height: 45vh;
+    border-radius: 0.5em;
+  }
+}
+
+.project--img--multiple--left {
+  grid-area: 1/1/7/5;
+  position: relative;
+  // display: grid;
+  // grid-template-columns: repeat(2,25vw);
+  // grid-template-rows: repeat(2,40vh);
+  img {
+    position: absolute;
+    height: 35vh;
+    border-radius: 0.5em;
+    &:nth-child(1) {
+      left: 20px;
+      top: 40px;
+    }
+    &:nth-child(2) {
+      left: 200px;
+      top: 250px;
+      z-index: 5;
+    }
+    &:nth-child(3) {
+      left: 20px;
+      top: 450px;
+    }
+  }
+}
+
 //project1
 .project1 {
   background-color: $ternary1;
   color: $ternary2;
+  z-index: 2;
 }
 
 //project2
 .project2 {
-  background-color: $primary2;
-  color: #ffffff;
+  background-color: $secondary1;
+  color: $secondary2;
+  z-index: 1;
 }
 
 //project3
 .project3 {
-  background-color: $secondary1;
-  color: $secondary2;
+  background-color: $primary2;
+  color: #ffffff;
+  z-index: 4;
 }
 
 //project4
@@ -317,17 +387,16 @@ nav {
   margin-left: 50px;
   grid-area: 3/1/4/3;
 }
-.contact--final{
-  grid-area:5/3/7/7;
+.contact--final {
+  grid-area: 5/3/7/7;
 }
-.contact--cp {
-  grid-area: 6/1/7/8;
+.footer {
   background-color: rgb(48, 48, 48);
+  height: 10vh;
   color: #ffffff;
   font-family: "Roboto Condensed", sans-serif;
-  position: relative;
 }
-.contact--content-header{
+.contact--content-header {
   grid-area: 2/3/3/7;
 }
 .contact--textbox {
@@ -356,4 +425,22 @@ nav {
   height: 100px;
   width: 2px;
   background-color: $secondary2;
+}
+
+//photo zoom
+.img--zoomed {
+  width: 90vw;
+  height: auto !important;
+  object-position: center;
+  z-index: 1000;
+  right: 5vh !important;
+  position: fixed;
+}
+.overlay--show {
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  // position: fixed;
 }
