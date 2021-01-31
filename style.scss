@@ -6,17 +6,50 @@
   box-sizing: border-box;
 }
 html {
+  overflow-x: hidden;
   position: relative;
-  background-color: black;
+  // background-color: black;
   scroll-behavior: smooth;
+  width: 100vw;
 }
 body {
-  position: absolute;
-  top: -10vh;
+  overflow: visible;
+  position: relative;
+  // top: -10vh;
   left: 0;
   width: 100vw;
-  // height: 800vh;
+  height: 630vh;
 }
+
+// .progress{
+//   height: 55vh;
+//   width: 100px;
+//   position: relative;
+//   top:100px;
+//   left: -15px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+//   z-index: 100;
+// }
+
+// .progress--bubble{
+//   min-height: 15px;
+//   min-width:15px;
+//   border-radius: 5em;
+//   border: solid 2px rgb(114, 114, 114);
+//   transition: all 0.5s ease-out;
+// }
+// .progress--stick{
+//   height: 65px;
+//   width: 2px;
+//   background-color: rgb(114, 114, 114);
+// }
+
+// .progress--active{
+//   background-color: rgb(114, 114, 114);
+// }
 
 //buttons! (3 color options)
 
@@ -97,23 +130,36 @@ p,
 li {
   line-height: 130%;
 }
+.container {
+  // overflow:scroll;
+  // height: 700vh;
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+}
 // sections
 .page {
+  background-color: $primary2;
+  transition: all 0.2s ease-out;
   height: 100vh;
+  width: 100vw;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
+.scroll {
+  // scroll-snap-align: start !important;
+}
+
 .home {
   font-family: "Roboto Condensed", sans-serif;
-  background-color: $primary2;
+  // background-color: $primary2;
   color: $primary1;
   z-index: 0;
 }
 
 .about {
-  background-color: $secondary1;
+  // background-color: $secondary1;
   color: $secondary2;
   // left: 10px;
   z-index: 1;
@@ -122,21 +168,21 @@ li {
 nav {
   position: sticky;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1000;
 }
 
 .menu {
-  // font-family: "Abril Fatface", cursive;
   font-family: "Roboto Condensed", sans-serif;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 10vh;
   font-size: 1.2em;
-  // box-shadow: 3px 3px 10px rgb(71, 65, 65);
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(3px);
+  box-shadow: 2px 2px 10px rgb(32, 31, 31);
+  // background-color: rgba(255, 255, 255, 0);
+  // backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.877);
 }
 
 .menu--item {
@@ -208,7 +254,7 @@ nav {
 
 //about page details
 .about--title {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Roboto Condensed", sans-serif;
   margin-left: 50px;
   grid-area: 3/1/4/3;
 }
@@ -268,25 +314,23 @@ nav {
 }
 
 .project--img--multiple {
-  grid-area: 1/3/7/8;
+  grid-area: 2/4/6/8;
+  margin-left: 75px;
   position: relative;
+  width: 45vw;
+  height: 40vh;
   img {
-    position: absolute;
-    height: 40vh;
-    border-radius: 0.5em;
-    &:nth-child(1) {
-      right: 20px;
-      top: 40px;
-    }
-    &:nth-child(2) {
-      right: 110px;
-      top: 250px;
-    }
-    &:nth-child(3) {
-      right: 220px;
-      top: 410px;
-    }
+    object-fit: contain;
+    width: 100%;
   }
+}
+/* no circle */
+.flickity-button {
+  background: transparent !important;
+}
+
+.flickity-page-dots {
+  bottom: -100px !important;
 }
 
 .project--title--left {
@@ -316,28 +360,15 @@ nav {
 }
 
 .project--img--multiple--left {
-  grid-area: 1/1/7/5;
+  grid-area: 2/1/4/4;
+  margin-left: 75px;
   position: relative;
-  // display: grid;
-  // grid-template-columns: repeat(2,25vw);
-  // grid-template-rows: repeat(2,40vh);
+  position: relative;
+  width: 45vw;
+  height: 40vh;
   img {
-    position: absolute;
-    height: 35vh;
-    border-radius: 0.5em;
-    &:nth-child(1) {
-      left: 20px;
-      top: 40px;
-    }
-    &:nth-child(2) {
-      left: 200px;
-      top: 250px;
-      z-index: 5;
-    }
-    &:nth-child(3) {
-      left: 20px;
-      top: 450px;
-    }
+    object-fit: contain;
+    width: 100%;
   }
 }
 
@@ -378,9 +409,14 @@ nav {
 //contact page
 
 .contact {
-  height: 100vh !important;
-  background-color: $secondary1;
+  height: 50vh !important;
+  background-color: $primary2 !important;
   color: $secondary2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: -1px -1px 20px #474141;
 }
 .contact--title {
   font-family: "Abril Fatface", cursive;
@@ -388,22 +424,33 @@ nav {
   grid-area: 3/1/4/3;
 }
 .contact--final {
-  grid-area: 5/3/7/7;
+color: $ternary2;
 }
+.contact--final--high {
+  color: whitesmoke;
+  }
+
 .footer {
-  background-color: rgb(48, 48, 48);
   height: 10vh;
   color: #ffffff;
   font-family: "Roboto Condensed", sans-serif;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.contact--content-header {
-  grid-area: 2/3/3/7;
+
+.footer--sep {
+  width: 300px;
+  height: 0.5px;
+  background-color: #ffffff;
 }
+
 .contact--textbox {
-  grid-area: 3/3/5/7;
   display: flex;
   justify-content: space-evenly;
-  height: 50vh;
+  width: 50%;
 }
 .contact--links {
   display: flex;
@@ -413,34 +460,113 @@ nav {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.3em;
 }
+
+.contact--form {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .form--container {
+    width: 800px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: solid 2px $ternary2;
+    border-radius: 1.5em;
+    background-color: #ffffff;
+  }
+  input {
+    padding: 5px;
+    width: 300px;
+    height: 40px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 0.7em;
+    background-color: transparent;
+    color: $ternary2;
+    border: none;
+    &::placeholder {
+      color: grey;
+    }
+    &:nth-child(1){
+    border-right: solid 2px $ternary2;
+    }
+    &:nth-child(2){
+      width: 500px;
+      }
+  }
+  
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contact--links--flex {
   display: flex;
   align-items: center;
 }
 
 .contact--icons {
-  fill: $secondary2;
+  fill: $ternary2;
+  transition: all 3s ease-out;
 }
-.contact--separator {
-  height: 100px;
-  width: 2px;
-  background-color: $secondary2;
+.contact--icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 2em;
+  border: solid 2px $ternary2;
+  z-index: 100;
+  transition: all 0.1s ease-out;
+  background-color: $primary2;
+  &:hover {
+    background-color: $ternary2;
+    .contact--icons {
+      fill: white;
+    }
+  }
 }
 
-//photo zoom
-.img--zoomed {
-  width: 90vw;
-  height: auto !important;
-  object-position: center;
-  z-index: 1000;
-  right: 5vh !important;
-  position: fixed;
-}
-.overlay--show {
-  height: 100vh;
-  width: 100vw;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.9);
-  overflow: hidden;
-  // position: fixed;
+@media only screen and (max-width: 600px) {
+  img,
+  video {
+    display: none;
+  }
+  h1 {
+    font-size: 2em;
+    margin-top: 15px;
+  }
+  h2,
+  td {
+    font-size: 1em;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 10px;
+  }
+  .about--text {
+    font-size: 1em;
+  }
+  h2,
+  h3,
+  p,
+  li {
+    line-height: 130%;
+  }
+  .project--title--left,
+  .project--title--right,
+  .about--title,
+  .contact--title {
+    grid-area: 1/2/2/8;
+  }
+  .project--text--left,
+  .project--text--right,
+  .about--text {
+    grid-area: 2/2/5/7;
+  }
+  .project--btn--right,
+  .project--btn--left {
+    width: 90vw;
+    grid-area: 6/1/7/6 !important;
+  }
 }
