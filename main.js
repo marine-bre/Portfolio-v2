@@ -11,10 +11,6 @@ const overlay = document.querySelector(".overlay")
 
 AOS.init();
 
-//progress bar
-// const p = document.querySelectorAll(".progress--bubble")
-// console.log(p)
-
 const page = document.querySelectorAll(".page")
 
 window.addEventListener("scroll", (e) => {
