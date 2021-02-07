@@ -182,18 +182,9 @@ nav {
   }
 }
 
-// a:after {
-//   content: " ";
-//   border-bottom: solid 2px white;
-//   width: 0;
-//   z-index: 200;
-//   height: 2px;
-//   bottom: 0;
-//   left: 0;
-//   position: absolute;
-// }
 .menu--item,
 .menu--logo {
+  margin-top: 10px;
   list-style-type: none;
   fill: #ffffff !important;
 }

@@ -212,6 +212,7 @@ nav {
 
 .menu--item,
 .menu--logo {
+  margin-top: 10px;
   list-style-type: none;
   fill: #ffffff !important;
 }
