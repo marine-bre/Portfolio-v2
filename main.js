@@ -32,7 +32,7 @@ window.addEventListener("scroll", (e) => {
             tlP2.play()
         },1000)
     }
-    if (window.scrollY > 0.6 * window.innerHeight * 3) {
+    if (window.scrollY > 0.7 * window.innerHeight * 3) {
         page.forEach(el=>el.style.backgroundColor = "rgb(222, 182, 209)")
         setTimeout(()=>{ 
             tlP3.play()
