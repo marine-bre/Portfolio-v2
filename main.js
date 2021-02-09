@@ -83,7 +83,7 @@ let tlAbout = gsap.timeline({ paused: true });
 tlAbout.fromTo('.highlight--about', 1.5, {
     backgroundColor: "transparent",
 }, {
-    backgroundColor: "rgba(255, 255, 255, 0.7)",
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
     ease: "power1"
 })
 
@@ -94,7 +94,7 @@ let tlP1 = gsap.timeline({ paused: true });
 tlP1.fromTo('.highlight', 2, {
     backgroundColor: "transparent",
 }, {
-    backgroundColor: "rgba(255, 255, 255, 0.7)",
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
     ease: "power1"
 })
 
@@ -106,7 +106,7 @@ let tlP2 = gsap.timeline({ paused: true });
 tlP2.fromTo('.highlight2', 2, {
     backgroundColor: "transparent",
 }, {
-    backgroundColor: "rgba(255, 255, 255, 0.7)",
+    backgroundColor: "rgba(255, 255, 255, 0.8)", 
     ease: "power1"
 })
 
