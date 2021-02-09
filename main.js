@@ -1,14 +1,3 @@
-
-// const menuItem = document.querySelectorAll(".menu--item");
-
-// const home = document.querySelector(".home");
-// const about = document.querySelector(".about");
-// const keyboard = document.querySelector(".home--img");
-// const contact = document.querySelector(".contact");
-// const project1 = document.querySelector("#project1");
-// const overlay = document.querySelector(".overlay")
-
-
 AOS.init();
 
 const page = document.querySelectorAll(".page")
