@@ -26,14 +26,17 @@ window.addEventListener("scroll", (e) => {
             tlP1.play()
         },1000)
     }
-    if (window.scrollY > 0.8 * window.innerHeight * 2  ) {
+    if (window.scrollY > 0.7 * window.innerHeight * 2  ) {
         page.forEach(el=>el.style.backgroundColor = "#ADEFD1FF")
-        setTimeout(()=>{
+        setTimeout(()=>{ 
             tlP2.play()
         },1000)
     }
-    if (window.scrollY > 0.8 * window.innerHeight * 3) {
+    if (window.scrollY > 0.6 * window.innerHeight * 3) {
         page.forEach(el=>el.style.backgroundColor = "rgb(222, 182, 209)")
+        setTimeout(()=>{ 
+            tlP3.play()
+        },1000)
 
     }
     if (window.scrollY > 0.8 * window.innerHeight * 4.5 ) {
@@ -88,7 +91,7 @@ tlAbout.fromTo('.highlight--about', 1.5, {
 //project 1
 
 let tlP1 = gsap.timeline({ paused: true });
-tlP1.fromTo('.highlight', 1.5, {
+tlP1.fromTo('.highlight', 2, {
     backgroundColor: "transparent",
 }, {
     backgroundColor: "rgba(255, 255, 255, 0.7)",
@@ -100,7 +103,7 @@ tlP1.fromTo('.highlight', 1.5, {
 //project2
 
 let tlP2 = gsap.timeline({ paused: true });
-tlP2.fromTo('.highlight2', 1.5, {
+tlP2.fromTo('.highlight2', 2, {
     backgroundColor: "transparent",
 }, {
     backgroundColor: "rgba(255, 255, 255, 0.7)",
@@ -110,24 +113,10 @@ tlP2.fromTo('.highlight2', 1.5, {
 
 
 //project 3
-// let tlP3 = gsap.timeline({ paused: true });
-// tlP3.fromTo(".project3--el", 1.5, {
-//     y: "-40%",
-//     opacity: "0"
-// }, {
-//     y: "0",
-//     opacity: "1",
-//     ease: "power1"
-// })
-
-// //project 4
-
-// let tlP4 = gsap.timeline({ paused: true });
-// tlP4.fromTo(".project4--el", 1.5, {
-//     y: "-40%",
-//     opacity: "0"
-// }, {
-//     y: "0",
-//     opacity: "1",
-//     ease: "power1"
-// })
+let tlP3 = gsap.timeline({ paused: true });
+tlP3.fromTo(".highlight3", 2, {
+    backgroundColor: "rgba(250, 88, 185, 0)",
+}, {
+    backgroundColor: "rgba(250, 88, 185, 0.65)",
+    ease: "power1"
+})

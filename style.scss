@@ -305,7 +305,7 @@ nav {
   position: relative;
   width: 45vw;
   height: 40vh;
-  img {
+  img, video {
     object-fit: contain;
     width: 100%;
   }
@@ -331,8 +331,10 @@ nav {
 }
 
 .project--btn--left {
-  grid-area: 5/1/6/3;
+  grid-area: 6/1/7/3;
   margin-left: 50px;
+  margin-top: -50px;
+
 }
 
 .project--img--left {
