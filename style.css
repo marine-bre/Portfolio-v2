@@ -14,8 +14,6 @@ html {
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-  -ms-scroll-snap-type: mandatory;
-      scroll-snap-type: mandatory;
   scroll-padding-top: 5vh;
 }
 
@@ -139,10 +137,12 @@ li {
 .home {
   font-family: "Roboto Condensed", sans-serif;
   color: #fa58b9;
+  z-index: 0;
 }
 
 .about {
   color: #9a2929;
+  z-index: -1;
 }
 
 nav {

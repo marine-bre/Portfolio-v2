@@ -13,7 +13,6 @@ html {
   width: 100vw;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-snap-type: mandatory;
   scroll-padding-top: 5vh;
 }
 body {
@@ -104,6 +103,7 @@ li {
 
 // sections
 .page {
+  // scroll-snap-align: start;
   scroll-snap-align: start;
   background-color: $primary2;
   transition: all 0.2s ease-out;
@@ -118,11 +118,13 @@ li {
   font-family: "Roboto Condensed", sans-serif;
   // background-color: $primary2;
   color: $primary1;
+  z-index: 0;
 }
 
 .about {
   // background-color: $secondary1;
   color: $secondary2;
+  z-index:-1;
 }
 
 nav {
