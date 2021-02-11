@@ -1,4 +1,3 @@
-// AOS.init();
 
 const page = document.querySelectorAll(".page")
 
@@ -25,7 +24,7 @@ tl1.fromTo('.home--text', 1.5, {
     opacity: "1",
     ease: "power1"
 }, "-=1.5").fromTo(
-    '.underline', 1.5, {
+    '.underline', 0.5, {
     backgroundColor: "none",
 }, {
     backgroundColor: "white",
@@ -73,7 +72,7 @@ tlP1.fromTo('.project1--el', 1.5, {
     y: "0",
     opacity:"1",
     ease: "power1"
-}).fromTo('.highlight', 1, {
+}).fromTo('.highlight', 0.5, {
     backgroundColor: "transparent",
 }, {
     backgroundColor: "rgba(255, 255, 255, 0.8)",
@@ -92,7 +91,7 @@ tlP2.fromTo('.project2--el', 1.5, {
     y: "0",
     opacity:"1",
     ease: "power1"
-}).fromTo('.highlight2', 1, {
+}).fromTo('.highlight2', 0.5, {
     backgroundColor: "transparent",
 }, {
     backgroundColor: "rgba(255, 255, 255, 0.8)",
@@ -110,7 +109,7 @@ tlP3.fromTo('.project3--el', 1.5, {
     y: "0",
     opacity:"1",
     ease: "power1"
-}).fromTo(".highlight3", 1, {
+}).fromTo(".highlight3", 0.5, {
     backgroundColor: "rgba(250, 88, 185, 0)",
 }, {
     backgroundColor: "rgba(250, 88, 185, 0.65)",
