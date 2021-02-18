@@ -128,41 +128,46 @@ tlP4.fromTo('.project4--el', 1.5, {
 })
 
 
-window.addEventListener("scroll", (e) => {
-    if (window.scrollY < 0.7 * window.innerHeight) {
+
+
+let scrollEvent = e => {
+    console.log(window.pageYOffset,  window.innerHeight)
+    if (window.pageYOffset < 0.7 * window.innerHeight) {
         page.forEach(el => el.style.backgroundColor = "#316fb6")
-      
     }
-    if (window.scrollY > window.innerHeight) {
+    if (window.pageYOffset > window.innerHeight) {
             tlAbout.play()
     }
-    if (window.scrollY > 0.7 * window.innerHeight) {
+    if (window.pageYOffset > 0.7 * window.innerHeight) {
         page.forEach(el => el.style.backgroundColor = "rgb(222, 182, 209)")
     }
-    if (window.scrollY > 2 * window.innerHeight) {
+    if (window.pageYOffset > 2 * window.innerHeight) {
         tlP1.play()
     }
-    if (window.scrollY > 0.7 * window.innerHeight * 2) {
+    if (window.pageYOffset > 0.7 * window.innerHeight * 2) {
         page.forEach(el => el.style.backgroundColor = "#ADEFD1FF")
     }
-    if (window.scrollY > 3 * window.innerHeight) {
+    if (window.pageYOffset > 3 * window.innerHeight) {
         tlP2.play()
     }
-    if (window.scrollY > 0.7 * window.innerHeight * 3.1) {
+    if (window.pageYOffset > 0.7 * window.innerHeight * 3.1) {
         page.forEach(el => el.style.backgroundColor = "rgb(222, 182, 209)")
     }
-    if (window.scrollY > 4 * window.innerHeight) {
+    if (window.pageYOffset > 4 * window.innerHeight) {
         tlP3.play()
     }
-    if (window.scrollY > 0.85 * window.innerHeight * 4) {
+    if (window.pageYOffset > 0.85 * window.innerHeight * 4) {
         page.forEach(el => el.style.backgroundColor = "#316fb6")
     }
-    if (window.scrollY > 5 * window.innerHeight) {
+    if (window.pageYOffset > 5 * window.innerHeight) {
         tlP4.play()
     }
-    if (window.scrollY > 0.85 * window.innerHeight * 5) {
+    if (window.pageYOffset > 0.85 * window.innerHeight * 5) {
         page.forEach(el => el.style.backgroundColor = "#ADEFD1FF")
     }
-})
+}
+
+document.body.addEventListener("touchmove", scrollEvent)
+window.addEventListener("scroll", scrollEvent)
 
 
