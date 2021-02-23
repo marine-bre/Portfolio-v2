@@ -4,25 +4,12 @@
     let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
 
     if (isMobile) {
-
-
-        // let home = document.querySelector("#home")
-        // let about = document.querySelector("#about")
-        // let project1 = document.querySelector("#project1")
-        // let project2 = document.querySelector("#project2")
-        // let project3 = document.querySelector("#project3")
-        // let project4 = document.querySelector("#project4")
+        const svgObject = document.querySelector("svg")
+        svgObject.setAttribute("width", "60")
+        console.log(svgObject.height.animVal.valueInSpecifiedUnits)
+        
 
         const page = document.querySelectorAll(".page")
-
-
-        // home.style.backgroundColor = "#316fb6"
-        // about.style.backgroundColor = "rgb(222, 182, 209)"
-        // project1.style.backgroundColor = "#ADEFD1FF"
-        // project2.style.backgroundColor = "rgb(222, 182, 209)"
-        // project3.style.backgroundColor = "#316fb6"
-        // contact4.style.backgroundColor = "#ADEFD1FF"
-
         page[0].style.backgroundColor = "#316fb6"
         page[1].style.backgroundColor = "rgb(222, 182, 209)"
         page[2].style.backgroundColor = "#ADEFD1FF"

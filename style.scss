@@ -124,7 +124,7 @@ li {
 .about {
   // background-color: $secondary1;
   color: $secondary2;
-  z-index:-1;
+  z-index: -1;
 }
 
 nav {
@@ -151,27 +151,27 @@ nav {
     cursor: pointer;
     font-size: 1.2em;
     position: relative;
-    &:before{
+    &:before {
       content: " ";
-        border-bottom: solid 2px white;
-        width: 0%;
-        z-index: 200;
-        height: 3px;
-        bottom: 0;
-        left: 50%;
-        position: absolute;
-        transition: all 0.5s;
+      border-bottom: solid 2px white;
+      width: 0%;
+      z-index: 200;
+      height: 3px;
+      bottom: 0;
+      left: 50%;
+      position: absolute;
+      transition: all 0.5s;
     }
-    &:after{
+    &:after {
       content: " ";
-        border-bottom: solid 2px white;
-        width: 0%;
-        z-index: 200;
-        height: 3px;
-        bottom: 0;
-        right: 50%;
-        position: absolute;
-        transition: all 0.5s;
+      border-bottom: solid 2px white;
+      width: 0%;
+      z-index: 200;
+      height: 3px;
+      bottom: 0;
+      right: 50%;
+      position: absolute;
+      transition: all 0.5s;
     }
     &:hover {
       &:after {
@@ -310,7 +310,8 @@ nav {
   position: relative;
   width: 45vw;
   height: 40vh;
-  img, video {
+  img,
+  video {
     object-fit: contain;
     width: 100%;
   }
@@ -339,7 +340,6 @@ nav {
   grid-area: 6/1/7/3;
   margin-left: 50px;
   margin-top: -50px;
-
 }
 
 .project--img--left {
@@ -522,12 +522,16 @@ form {
 }
 
 @media only screen and (max-width: 600px) {
-  body, html{
-width: 100vw;
-overflow-x: hidden;
+  body,
+  html {
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-snap-type: none !important;
   }
   img,
-  video, .project--img--multiple, .project--img--multiple--left {
+  video,
+  .project--img--multiple,
+  .project--img--multiple--left {
     display: none;
   }
   h1 {
@@ -561,9 +565,8 @@ overflow-x: hidden;
   .project--text--right,
   .about--text {
     grid-area: 2/1/5/8;
-    margin-left:5px;
-    margin-right:5px;
-
+    margin-left: 5px;
+    margin-right: 5px;
   }
   .project--btn--right,
   .project--btn--left {
@@ -571,9 +574,8 @@ overflow-x: hidden;
     grid-area: 6/1/7/6 !important;
     margin-top: 0 !important;
     margin-left: -10px !important;
-
   }
-  .home--text{
+  .home--text {
     text-align: center;
     grid-area: 2/2/6/7;
   }

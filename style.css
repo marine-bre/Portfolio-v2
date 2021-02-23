@@ -428,7 +428,8 @@ nav {
   height: 40vh;
 }
 
-.project--img--multiple img, .project--img--multiple video {
+.project--img--multiple img,
+.project--img--multiple video {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
@@ -740,12 +741,17 @@ form {
 }
 
 @media only screen and (max-width: 600px) {
-  body, html {
+  body,
+  html {
     width: 100vw;
     overflow-x: hidden;
+    -ms-scroll-snap-type: none !important;
+        scroll-snap-type: none !important;
   }
   img,
-  video, .project--img--multiple, .project--img--multiple--left {
+  video,
+  .project--img--multiple,
+  .project--img--multiple--left {
     display: none;
   }
   h1 {
