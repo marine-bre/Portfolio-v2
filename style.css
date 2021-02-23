@@ -800,13 +800,13 @@ form {
   }
   .project--btn--right,
   .project--btn--left {
-    width: 90vw;
+    width: 100vw;
     -ms-grid-row: 6 !important;
     -ms-grid-row-span: 1 !important;
     -ms-grid-column: 1 !important;
-    -ms-grid-column-span: 5 !important;
-    grid-area: 6/1/7/6 !important;
-    margin-top: 0 !important;
+    -ms-grid-column-span: 6 !important;
+    grid-area: 6/1/7/7 !important;
+    margin: 0 10px !important;
   }
   .home--text {
     text-align: center;
