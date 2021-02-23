@@ -553,7 +553,9 @@ overflow-x: hidden;
   .project--title--right,
   .about--title,
   .contact--title {
-    grid-area: 1/2/2/8;
+    grid-area: 1/1/2/8 !important;
+    text-align: center;
+    margin: 0;
   }
   .project--text--left,
   .project--text--right,
@@ -568,7 +570,11 @@ overflow-x: hidden;
     width: 90vw;
     grid-area: 6/1/7/6 !important;
     margin-top: 0 !important;
-    margin-left: -20px !important;
+    margin-left: -10px !important;
 
+  }
+  .home--text{
+    text-align: center;
+    grid-area: 2/2/6/7;
   }
 }

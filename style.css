@@ -771,11 +771,13 @@ form {
   .project--title--right,
   .about--title,
   .contact--title {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 6;
-    grid-area: 1/2/2/8;
+    -ms-grid-row: 1 !important;
+    -ms-grid-row-span: 1 !important;
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 7 !important;
+    grid-area: 1/1/2/8 !important;
+    text-align: center;
+    margin: 0;
   }
   .project--text--left,
   .project--text--right,
@@ -797,7 +799,15 @@ form {
     -ms-grid-column-span: 5 !important;
     grid-area: 6/1/7/6 !important;
     margin-top: 0 !important;
-    margin-left: -20px !important;
+    margin-left: -10px !important;
+  }
+  .home--text {
+    text-align: center;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 5;
+    grid-area: 2/2/6/7;
   }
 }
 /*# sourceMappingURL=style.css.map */
