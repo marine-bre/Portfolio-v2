@@ -762,7 +762,6 @@ form {
   td {
     font-size: 1em;
     font-family: "Roboto Condensed", sans-serif;
-    margin: 10px;
   }
   .about--text {
     font-size: 1em;
@@ -772,6 +771,9 @@ form {
   p,
   li {
     line-height: 130%;
+  }
+  .about--title h1 {
+    margin-bottom: 15px;
   }
   .project--title--left,
   .project--title--right,
@@ -805,7 +807,6 @@ form {
     -ms-grid-column-span: 5 !important;
     grid-area: 6/1/7/6 !important;
     margin-top: 0 !important;
-    margin-left: -10px !important;
   }
   .home--text {
     text-align: center;
@@ -814,6 +815,15 @@ form {
     -ms-grid-column: 2;
     -ms-grid-column-span: 5;
     grid-area: 2/2/6/7;
+  }
+  .contact--form form {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .contact--form form .form--container {
+    width: 350px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
